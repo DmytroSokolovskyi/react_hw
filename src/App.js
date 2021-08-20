@@ -1,7 +1,16 @@
-export default function App () {
+import Users from "./components/users/Users";
+import Posts from "./components/posts/Posts";
+
+import Comments from "./components/comments/Comments";
+
+export default function App() {
     return (
         <div>
-            App
+            <Users/>
+            <Posts/>
+            <Comments/>
         </div>
     );
- }
+}
+
+
