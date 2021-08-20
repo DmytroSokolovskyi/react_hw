@@ -22,7 +22,6 @@ export default function Users() {
 
 
     const chosenUser = (id) => {
-        console.log(id);
         getUserPosts(id).then(value => setPosts(value))
     };
     const chosenPost = (idPost) => {
