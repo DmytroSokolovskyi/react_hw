@@ -1,0 +1,18 @@
+.main {
+    display: flex;
+
+}
+
+.users {
+    width: 30%;
+    background-color: cadetblue;
+}
+
+.chosen {
+    width: 40%;
+    background-color: chartreuse;
+}
+.comments {
+    width: 40%;
+    background-color: darkolivegreen;
+}
