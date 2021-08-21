@@ -1,8 +1,11 @@
-export default function Comment ({comment:{id, name, body}}) {
+export default function Comment ({ chosenComment, comment, comment:{id, name}}) {
+    const chosen = () => {
+        chosenComment(comment)
+    };
+
     return (
         <div>
-           <h4>{id} {name}</h4>
-            {body}
+           <strong>{id} {name}</strong> <button onClick={chosen}>details</button>
         </div>
     );
  }

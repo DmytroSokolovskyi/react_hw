@@ -1,15 +1,14 @@
-export default function Post ( { chosenPost, post:{id, title, body}}) {
-    const chosenComment = () => {
-        chosenPost(id)
+export default function Post ( { chosenPost,post, post:{id, title}}) {
+    const detailsPost = () => {
+        chosenPost(post)
     };
 
     return (
         <div>
            <h4>
                {id} {title}
-               <button onClick={chosenComment}> Comments to post </button>
+               <button onClick={detailsPost}> Details </button>
            </h4>
-            {body}
         </div>
     );
  }

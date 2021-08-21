@@ -1,9 +1,8 @@
-const url = 'https://jsonplaceholder.typicode.com/users';
+const url = 'https://jsonplaceholder.typicode.com/posts';
 
-const getUserPosts = (id) => {
+const getPosts = () => {
 
-    return fetch(`${url}/${id}/posts`)
-        .then(value => value.json());
+    return fetch(url).then(value => value.json());
 };
 
-export {getUserPosts};
+export {getPosts};

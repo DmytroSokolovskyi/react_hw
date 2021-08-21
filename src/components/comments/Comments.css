@@ -1,0 +1,13 @@
+.main {
+    display: flex;
+}
+
+.comments {
+    width: 50%;
+    background-color: antiquewhite;
+}
+
+.info {
+    width: 50%;
+    background-color: aqua;
+}
