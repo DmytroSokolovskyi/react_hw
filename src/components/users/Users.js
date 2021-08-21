@@ -31,19 +31,19 @@ export default function Users() {
 
         <div className={'main'}>
 
-            <div className="users">
+            <div className={'users'}>
                 {users.map(user => <User chosenUser={chosenUser} user={user} key={user.id}/>)}
             </div>
 
 
             {
-                posts && <div className="chosen">
+                posts && <div className={'chosen'}>
                     <Posts posts={posts} chosenPost={chosenPost}/>
                 </div>
             }
 
             {
-                comments && <div className='comments'>
+                comments && <div className={'comments'}>
                     <Comments comments={comments}/>
                 </div>
             }
