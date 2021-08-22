@@ -22,8 +22,8 @@ export default function App() {
 
                 <div>
                     <Route path={'/users-page'}> <Users/> </Route>
-                    <Route path={'/posts-page'}> <Posts/> </Route>
-                    <Route path={'/comments-page'}> <Comments/> </Route>
+                    <Route path={'/posts-page'} render={() => <Posts/>} />
+                    <Route path={'/comments-page'} component={Comments} />
                 </div>
 
             </div>
