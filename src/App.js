@@ -1,7 +1,9 @@
-export default function App () {
+import Cars from "./components/cars/Cars";
+
+export default function App() {
     return (
         <div>
-            App
+            <Cars/>
         </div>
     );
- }
+}
