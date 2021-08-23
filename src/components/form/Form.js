@@ -1,29 +1,19 @@
-import {useState} from "react";
+import {useEffect, useState} from "react";
 import {editCarForId, saveCar} from "../../services/car.service";
 
 export default function Form({car}) {
 
-    let [model, setModel] = useState('');
-    let [price, setPrice] = useState('');
-    let [year, setYear] = useState('');
+    let [editCar, setEditCar] = useState({model: '', price: '', year: ''});
 
 
-    let editCar = {model: model, price: price, year: year};
+    useEffect(() => {
+        setEditCar({...car})
+    }, [car]);
 
 
 
-    const modelChange = (e) => {
-        setModel(e.target.value)
-        car.model = null;
-    };
-
-    const priceChange = (e) => {
-        setPrice(e.target.value)
-        car.price = null;
-    };
-    const yearChange = (e) => {
-        setYear(e.target.value)
-        car.year = null;
+    const carChange = (e) => {
+        setEditCar({...editCar, [e.target.name]: e.target.value})
     };
 
 
@@ -40,9 +30,9 @@ export default function Form({car}) {
     return (
         <div>
             <form onSubmit={saveFormCar}>
-                <input type="text" name={'model'} value={car.model || model} onChange={modelChange} maxLength={20} />
-                <input type="number" name={'price'} value={car.price || price} onChange={priceChange} min={0}/>
-                <input type="number" name={'year'} value={car.year || year} onChange={yearChange} min={1990} max={2021}/>
+                <input type="text" name={'model'} value={editCar.model} onChange={carChange} maxLength={20}/>
+                <input type="number" name={'price'} value={editCar.price} onChange={carChange} min={0}/>
+                <input type="number" name={'year'} value={editCar.year} onChange={carChange} min={1990} max={2021}/>
                 <input type="submit"/>
             </form>
         </div>
