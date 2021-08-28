@@ -1,4 +1,4 @@
-import {GET_CARS, SET_ONE_USER, SET_USERS} from "./actionTypes";
+import {EDIT_CAR, GET_CARS, SAVE_CAR, SET_ONE_USER, SET_USERS} from "./actionTypes";
 
 
 export const setOneUser = (value) => {
@@ -9,4 +9,10 @@ export const setUsers = (value) => {
 };
 export const getAllCars = (value) => {
     return {type: GET_CARS, payload: value}
+};
+export const saveFormCar = (value) => {
+    return {type: SAVE_CAR, payload: value}
+};
+export const editOneFormCar = (value) => {
+    return {type: EDIT_CAR, payload: value}
 };

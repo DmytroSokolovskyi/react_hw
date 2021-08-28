@@ -1,13 +1,16 @@
 import {useDispatch, useSelector} from "react-redux";
 import Car from "../car/Car";
-import {useEffect} from "react";
+import {useEffect, useState} from "react";
 import {getCars} from "../../services/cars.service";
 import {getAllCars} from "../../redux/actions";
+import FormEditCar from "../formEditCar/FormEditCar";
 
 
 export default function Cars() {
 
     const {cars} = useSelector(state => state.carsReducer);
+        let [choseCar, setChoseCar] = useState({});
+
 
     const dispatch = useDispatch();
 
@@ -15,11 +18,21 @@ export default function Cars() {
         getCars().then(value => dispatch(getAllCars(value)) )
     }, []);
 
+     const  choseOneCar = (car) => {
+         setChoseCar({...car})
+    };
+
     return (
         <div>
-            {
-                cars.map(car => <Car key={car.id} car={car}/>)
-            }
+            <div>
+                <FormEditCar choseCar={choseCar}/>
+            </div>
+            <div>
+                {
+                    cars.map(car => <Car choseOneCar={choseOneCar} key={car.id} car={car}/>)
+                }
+            </div>
+
         </div>
     );
 }
