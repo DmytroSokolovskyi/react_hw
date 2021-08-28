@@ -3,11 +3,12 @@ import User from "../user/User";
 import {getUsers} from "../../services/user.service";
 import UserForm from "../userForm/UserForm";
 import {useEffect} from "react";
-import {setUsers} from "../redux/actions";
+import {setUsers} from "../../redux/actions";
 
 export default function Users() {
 
-    const {users} = useSelector(state => state);
+    const {users} = useSelector(state => state.usersReducer);
+    console.log(users);
     const dispatch = useDispatch();
 
     useEffect(() => {

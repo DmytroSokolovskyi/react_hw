@@ -1,7 +1,7 @@
 import {useState} from "react";
 import {useDispatch} from "react-redux";
 import {saveUser} from "../../services/user.service";
-import {setOneUser} from "../redux/actions";
+import {setOneUser} from "../../redux/actions";
 
 export default function UserForm() {
 

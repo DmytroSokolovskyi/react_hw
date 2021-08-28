@@ -1,7 +1,7 @@
 import {SET_ONE_USER, SET_USERS} from "../actions";
 
 
-export const reducer = (state = {users: []}, action) => {
+export const usersReducer = (state = {users: []}, action) => {
 
     switch (action.type) {
         case SET_USERS:
