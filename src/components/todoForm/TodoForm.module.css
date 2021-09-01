@@ -1,0 +1,8 @@
+.input {
+    width: 44%;
+    margin: 3px;
+    padding: 5px;
+    background: azure;
+    border: 2px solid burlywood;
+    align-items: center;
+}

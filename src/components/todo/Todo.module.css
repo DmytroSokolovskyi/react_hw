@@ -1,0 +1,9 @@
+.mainDiv {
+    margin: 3px;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    background: azure;
+    border: 2px solid burlywood;
+    align-items: center;
+}
